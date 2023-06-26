@@ -1,3 +1,4 @@
+#![deny(clippy::all)]
 use axum::{
     http::StatusCode,
     routing::{get, post},
