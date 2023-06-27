@@ -2,13 +2,19 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+// localized strings json. ??implement language modification later. 
+import T from "./assets/ref/loc/en.json"; 
+// style json.
+import S from "./assets/ref/style.json";
+import TestIgnore from "./assets/components/TestIgnore";
 
 function App() {
   const [count, setCount] = useState(0);
-
+  
   return (
     <>
       <div>
+
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -25,9 +31,7 @@ function App() {
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <TestIgnore message={T.SPEC_CHAR_TEST} /> 
     </>
   );
 }

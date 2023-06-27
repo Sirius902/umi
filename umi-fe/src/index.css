@@ -1,5 +1,18 @@
+@font-face {
+  font-family: "Noto Sans";
+  src: url(assets/fonts/NotoSans/NotoSans.ttf);
+}
+@font-face {
+  font-family: "Noto Emoji";
+  src: url(assets/fonts/NotoSans/NotoEmoji.ttf);
+}
+@font-face {
+  font-family: "Noto Sans Japanese";
+  src: url(assets/fonts/NotoSans/NotoSansJapanese.ttf);
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Noto Sans", "Noto Emoji", "Noto Sans Japanese";
   line-height: 1.5;
   font-weight: 400;
 
