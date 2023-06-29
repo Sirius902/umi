@@ -7,14 +7,17 @@ import T from "./assets/ref/loc/en.json";
 // style json.
 import S from "./assets/ref/style.json";
 import TestIgnore from "./assets/components/TestIgnore";
+import FGCard from "./assets/components/FGCard";
+import UIHeader from "./assets/components/UIHeader";
 
 function App() {
   const [count, setCount] = useState(0);
   
   return (
     <>
+      <UIHeader />
       <div>
-
+      
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -22,15 +25,9 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
+      <br />
+      <FGCard />
+  
       <TestIgnore message={T.SPEC_CHAR_TEST} /> 
     </>
   );
