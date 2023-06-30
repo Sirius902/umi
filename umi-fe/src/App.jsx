@@ -9,26 +9,26 @@ import S from "./assets/ref/style.json";
 import TestIgnore from "./assets/components/TestIgnore";
 import FGCard from "./assets/components/FGCard";
 import UIHeader from "./assets/components/UIHeader";
+import UISidebar from "./assets/components/UISidebar";
 
 function App() {
   const [count, setCount] = useState(0);
-  
+  // react context
   return (
     <>
-      <UIHeader />
-      <div>
-      
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div class="header">
+        <UIHeader />
       </div>
-      <br />
-      <FGCard />
-  
-      <TestIgnore message={T.SPEC_CHAR_TEST} /> 
+      
+      <div class="content">
+        <div class="viewport">
+          <FGCard />
+        </div>
+        
+        <div class="sidebar">
+          <UISidebar />
+        </div>
+      </div>
     </>
   );
 }
